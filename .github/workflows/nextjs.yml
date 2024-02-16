@@ -81,8 +81,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-      - name: List all files in the output directory
-        run: ls -R ./
 
   # Deployment job
   deploy:
