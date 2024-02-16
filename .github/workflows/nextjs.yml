@@ -79,6 +79,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Copy analyzer folder to output directory
+        run: cp -r ./analyzer ./out/_analyze
 
   # Deployment job
   deploy:
