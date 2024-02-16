@@ -81,6 +81,8 @@ jobs:
           path: ./out
       - name: Copy analyzer folder to output directory
         run: cp -r ./analyzer ./out/_analyze
+      - name: List all files in the output directory
+        run: ls -R ./
 
   # Deployment job
   deploy:
