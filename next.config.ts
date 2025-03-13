@@ -2,7 +2,8 @@ import { NextConfig } from "next";
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = bundleAnalyzer({
-  enabled: true,
+  enabled: process.env.ANALYZE === 'true',
+  openAnalyzer: false,
 });
 
 // Create basePath for GitHub pages
