@@ -8,7 +8,6 @@ const basePath = process.env.NODE_ENV !== 'development' ? '/nextjs-ant-design-bu
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   basePath,
   experimental: {
     reactCompiler: true,
