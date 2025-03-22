@@ -14,7 +14,7 @@
     "@next/bundle-analyzer": "^15.2.2",
     "antd": "^5.24.3",
     "babel-plugin-react-compiler": "^19.0.0-beta-bafa41b-20250307",
-    "next": "^15.2.2",
+    "next": "^15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
