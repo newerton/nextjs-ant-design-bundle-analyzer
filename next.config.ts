@@ -1,21 +1,11 @@
-import bundleAnalyzer from '@next/bundle-analyzer';
-import { NextConfig } from 'next';
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: true,
-  openAnalyzer: false,
-  analyzerMode: 'static',
-});
-
-// Create basePath for GitHub pages
-const basePath = process.env.NODE_ENV !== 'development' ? '/nextjs-ant-design-bundle-analyzer' : '';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath,
+  reactCompiler: true,
   experimental: {
-    reactCompiler: true,
+    optimizePackageImports: ['antd'],
   },
-}
+};
 
-export default withBundleAnalyzer(nextConfig)
+export default nextConfig;

@@ -1,21 +1,21 @@
-import { Button } from "antd";
-import Link from "next/link";
+import { Button } from 'antd';
+import Link from 'next/link';
 
 const dataSource = [
   {
-    side: "server",
-    link: "https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/nodejs.html",
+    side: 'server',
+    link: 'https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/nodejs.html',
   },
   {
-    side: "client",
-    link: "https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/client.html",
+    side: 'client',
+    link: 'https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/client.html',
   },
 ];
 
 export default function Home() {
   return (
     <div>
-      <div style={{ marginBottom: "20px" }}>
+      <div style={{ marginBottom: '20px' }}>
         <Button type="primary">Button</Button>
       </div>
 
@@ -28,7 +28,7 @@ export default function Home() {
         </thead>
         <tbody>
           {dataSource.map((item, index) => (
-            <tr key={index}>
+            <tr key={index.toString()}>
               <td>{item.side}</td>
               <td>
                 <Link
