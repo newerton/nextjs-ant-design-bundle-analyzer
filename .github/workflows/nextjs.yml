@@ -54,6 +54,7 @@ jobs:
           node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
         with:
           # Automatically inject basePath in your Next.js configuration file and disable
@@ -79,7 +80,9 @@ jobs:
       - name: Generate bundle analysis
         run: ${{ steps.detect-package-manager.outputs.runner }} next experimental-analyze --output
       - name: Copy analyzer folder to output directory
-        run: cp -r .next/diagnostics/analyze/ out/analyze/
+        run: |
+          cp -r .next/diagnostics/analyze/ out/analyze/
+          sed -i "s|/_next/|${{ steps.pages.outputs.base_path }}/analyze/_next/|g" out/analyze/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
