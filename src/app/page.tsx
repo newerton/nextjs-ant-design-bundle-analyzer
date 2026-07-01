@@ -3,8 +3,12 @@ import Link from 'next/link';
 
 const dataSource = [
   {
-    side: 'analyze',
-    link: 'https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/',
+    side: 'server',
+    link: 'https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/nodejs.html',
+  },
+  {
+    side: 'client',
+    link: 'https://newerton.github.io/nextjs-ant-design-bundle-analyzer/analyze/client.html',
   },
 ];
 
